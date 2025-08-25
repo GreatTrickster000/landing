@@ -1,0 +1,6 @@
+@use '../../styles/mixins' as *;
+
+
+.features3 {
+  @include featureSection(true);
+}

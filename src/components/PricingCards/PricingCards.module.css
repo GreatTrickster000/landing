@@ -1,0 +1,101 @@
+.card {
+  inline-size: clamp(24rem, -47.619vw + 66.857125rem, 44rem);
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-block-size: clamp(532px, 21.429vw + 367.429px, 676px);
+}
+.card .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: 100%;
+}
+.card .content .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card .content .header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+.card .content .header h3 {
+  text-align: left;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #171717;
+}
+.card .content .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card .content .textPair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .content .textPair .price {
+  display: flex;
+  flex-direction: row;
+}
+.card .content .textPair .price .interval {
+  display: flex;
+  align-items: flex-end;
+}
+.card .content .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.card .content .button {
+  display: flex;
+  margin-block-start: auto;
+}
+.card--featured {
+  border: 1px solid #4F46E5;
+  box-shadow: 0 1.5625rem 3.125rem -0.75rem rgba(0, 0, 0, 0.25);
+}
+.card .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  background: #EEF2FF;
+  color: #4338CA;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: -2rem -2rem 2rem;
+}
+.card .accent {
+  font-weight: 600;
+  color: #4338CA;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+@media only screen and (max-width: 1439px) {
+  .card {
+    inline-size: clamp(19.9375rem, 97.964vw - 3.022875rem, 44rem);
+    min-block-size: clamp(38.25rem, -8.142vw + 42.158375rem, 40.25rem);
+  }
+  .card .content .text {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

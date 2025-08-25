@@ -1,0 +1,12 @@
+@use '../../styles/tokens/fonts' as *;
+@use "sass:math";
+
+@function rem($px, $base: 16) {
+  $value: math.div(abs($px), $base) * 1rem;
+
+  @if $px < 0 {
+    @return -$value;
+  }
+
+  @return $value;
+}

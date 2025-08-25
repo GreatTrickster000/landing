@@ -1,0 +1,37 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(rem(16), calc(1.502vw + rem(10.366)), rem(32));
+  border: 1px solid #E5E5E5;
+  border-radius: rem(8);
+  box-shadow: 0 rem(2) rem(4) rem(-1) rgba(0, 0, 0, 0.06),
+  0 rem(4) rem(6) rem(-1) rgba(0, 0, 0, 0.1);
+
+
+  .textPair {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+  }
+
+
+  .blue {
+    color: #4338CA;
+    cursor: pointer;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    gap: rem(16);
+  }
+}

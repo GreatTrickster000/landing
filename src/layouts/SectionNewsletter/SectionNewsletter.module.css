@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(4rem, 4.762vw + 1.7143125rem, 6rem) clamp(1rem, 11.905vw - 4.7143125rem, 6rem);
+  max-width: 90rem;
+  gap: clamp(2rem, -4.762vw + 6.2856875rem, 4rem);
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: clamp(3rem, 4.071vw + 2.0458125rem, 4rem) clamp(0.75rem, 1.018vw + 0.5114375rem, 1rem);
+  }
+}
+.container .content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-inline-size: clamp(37rem, -16.667vw + 52rem, 44rem);
+  gap: 3rem;
+}
+.container .content .message {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 3.005vw + 1.29575rem, 4rem);
+}
+.container .content .message .checkItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.container .content .message .checkItems > * {
+  flex: 0 0 auto;
+}
+.container .content .email {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 0.375586vw + 0.6619718125rem, 1rem);
+}
+.container .content .email .emailCapture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  inline-size: 100%;
+}
+.container .content .email .emailCapture .input {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #737373;
+  border: 0.0625rem solid #E5E5E5;
+  border-radius: 0.1875rem;
+  box-shadow: rgb(229, 229, 229);
+  inline-size: clamp(19.9375rem, 1.40845vw + 19.607394375rem, 20.875rem);
+  block-size: 2.5rem;
+  background: #FAFAFA;
+  padding: 0.625rem 0.875rem;
+  flex: none;
+}
+.container .imageWrapper {
+  inline-size: 100%;
+}
+.container .imageWrapper img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(1rem, 12.214vw - 1.862625rem, 4rem);
+  }
+  .content {
+    inline-size: 100%;
+    max-inline-size: none;
+  }
+  .imageWrapper {
+    inline-size: 100%;
+  }
+  .email .emailCapture {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

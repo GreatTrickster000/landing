@@ -1,0 +1,24 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+@use '../../styles/mixins' as *;
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(12);
+
+
+  .imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24);
+    height: rem(24);
+    background: #EEF2FF;
+    border-radius: 50%;
+  }
+}
