@@ -1,0 +1,125 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+
+
+.card {
+  inline-size: clamp(rem(384), calc(-47.619vw + rem(1069.714)), rem(704));
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  box-shadow: 0 rem(1) rem(2) 0 rgba(0, 0, 0, 0.05);
+  padding: rem(32);
+  display: flex;
+  flex-direction: column;
+  min-block-size: clamp(532px, calc(21.429vw + 367.429px), 676px);
+
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    gap: rem(32);
+    height: 100%;
+
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+
+      h3 {
+        text-align: left;
+        font-family: $font-family-base;
+        font-size: rem(24);
+        line-height: rem(32);
+        font-weight: $font-weight-semi-bold;
+        color: #171717;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: rem(8);
+    }
+
+    .textPair {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+
+      .price {
+        display: flex;
+        flex-direction: row;
+
+        .interval {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: rem(20);
+    }
+
+    .button {
+      display: flex;
+      margin-block-start: auto;
+
+    }
+  }
+
+  &--featured {
+    border: 1px solid #4F46E5;
+    box-shadow: 0 rem(25) rem(50) rem(-12) rgba(0, 0, 0, 0.25);
+  }
+
+  .badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(60);
+    background: #EEF2FF;
+    color: #4338CA;
+    font-weight: $font-weight-bold;
+    font-size: rem(20);
+    line-height: rem(28);
+    margin: rem(-32) rem(-32) rem(32);
+
+  }
+
+  .accent {
+    font-weight: $font-weight-semi-bold;
+    color: #4338CA;
+    font-size: rem(48);
+    line-height: rem(48);
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .card {
+    inline-size: clamp(rem(319), calc(97.964vw - rem(48.366)), rem(704));
+    min-block-size: clamp(rem(612), calc(-8.142vw + rem(674.534)), rem(644));
+  }
+  .card .content .text {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+

@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  flex: 1 1 37rem;
+  gap: 1.25rem;
+  max-inline-size: 37rem;
+  inline-size: auto;
+}
+.card--column {
+  flex-direction: column;
+  max-width: clamp(21rem, 7.143vw + 17.5714375rem, 24rem);
+  align-items: center;
+  text-align: center;
+}
+
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 3rem;
+  transform: translateY(-0.6875rem);
+  inline-size: 3rem;
+  block-size: 3rem;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06), 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
+}
+.cardImage--newsletter {
+  flex: 0 0 1.5rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  transform: translateY(0.125rem);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 0.5rem;
+  justify-content: center;
+  min-inline-size: 0;
+}

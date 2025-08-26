@@ -1,0 +1,81 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+@use '../../styles/mixins' as *;
+
+section {
+  @include commonPadding;
+}
+
+.sectionWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: $common-max-width;
+  gap: clamp(rem(32), calc(-4.762vw + rem(100.571)), rem(64));
+
+  .left {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: rem(48);
+    flex: 1 1 0;
+    min-inline-size: 0;
+
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+
+      .header {
+        font-family: $font-family-base;
+        font-weight: $font-weight-semi-bold;
+        color: $h2-color;
+        font-size: clamp(rem(48), calc(1.785714vw + rem(34.286)), rem(60));
+        line-height: clamp(rem(48), calc(1.785714vw + rem(34.286)), rem(60));
+        text-wrap: pretty;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: rem(24);
+    }
+
+    .cards > * {
+      flex: 0 0 auto;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex: 1 1 0;
+    min-inline-size: 0;
+    align-items: stretch;
+
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .sectionWrapper {
+    flex-direction: column;
+    gap: clamp(rem(48), calc(4.071vw + rem(32.733)), rem(64));
+  }
+  .sectionWrapper .left {
+    gap: clamp(rem(40), calc(2.036vw + rem(32.366)), rem(48));
+  }
+  .sectionWrapper .left .message .header {
+    font-size: clamp(rem(36), calc(3.053vw + rem(24.55)), rem(48));
+    line-height: clamp(rem(40), calc(2.036vw + rem(32.366)), rem(48));
+    text-wrap: balance;
+  }
+  .left, .right {
+    inline-size: 100%;
+  }
+}
+
+

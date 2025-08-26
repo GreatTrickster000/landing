@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: clamp(2.5rem, 17.857vw - 6.0714375rem, 10rem);
+}
+header .textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+header :where(h1, h2, h3, p) {
+  margin: 0;
+}
+header .text2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 0;
+  }
+}
