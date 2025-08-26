@@ -1,8 +1,0 @@
-@use '../../styles/tokens/colors' as *;
-@use '../../styles/tokens/fonts' as *;
-@use '../../styles/utils/functions' as *;
-
-.background {
-  background: $color-bg-body;
-  width: 100%;
-}

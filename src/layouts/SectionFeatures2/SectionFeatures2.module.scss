@@ -1,9 +1,0 @@
-@use '../../styles/tokens/colors' as *;
-@use '../../styles/tokens/fonts' as *;
-@use '../../styles/tokens/distance' as *;
-@use '../../styles/utils/functions' as *;
-@use '../../styles/mixins' as *;
-
-.features2 {
-  @include featureSection(false);
-}
