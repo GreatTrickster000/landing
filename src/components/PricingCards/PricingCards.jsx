@@ -1,4 +1,4 @@
-import styles from "./PricingCards.module.css";
+import styles from "./PricingCards.module.scss";
 import Button from "../Button/Button.jsx";
 import Text from "../Text/Text.jsx";
 import H2 from "../H2/h2.jsx";
