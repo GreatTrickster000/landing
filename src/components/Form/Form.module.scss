@@ -38,17 +38,7 @@ form {
         min-inline-size: 0;
         inline-size: 100%;
 
-        .inputName {
-          inline-size: 100%;
-          background: #FAFAFA;
-          @include form-border;
-          @include form-text;
-          padding: rem(10) rem(14);
 
-          &:focus {
-            @include form-focus;
-          }
-        }
 
       }
     }
