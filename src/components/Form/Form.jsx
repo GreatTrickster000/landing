@@ -2,6 +2,7 @@ import styles from "./Form.module.scss";
 import { useState } from "react";
 import Button from "../Button/Button.jsx";
 import cn from "classnames";
+import Input from "../Input/Input.jsx";
 
 export default function Form({}) {
   const [message, setMessage] = useState("");
@@ -23,43 +24,29 @@ export default function Form({}) {
       <div className={styles["contact-form"]}>
         <div className={styles.nameEmail}>
           <div className={styles.name}>
-            <label htmlFor="name" className={styles.label}>
-              Name
-            </label>
-            <input
-              className={cn(styles.inputName, {
-                [styles.error]: errors.name,
-              })}
+            <Input
               id="name"
               type="text"
               name="name"
+              label="Name"
               placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              error={errors.name}
             />
-            {errors.name && (
-              <p className={styles.errorMessage}>{errors.name}</p>
-            )}
           </div>
 
           <div className={styles.email}>
-            <label htmlFor="email" className={styles.label}>
-              Email
-            </label>
-            <input
-              className={cn(styles.inputEmail, {
-                [styles.error]: errors.email,
-              })}
+            <Input
               id="email"
               type="email"
+              label="Email"
               name="email"
               placeholder="example@example.com"
               value={email}
+              error={errors.email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            {errors.email && (
-              <p className={styles.errorMessage}>{errors.email}</p>
-            )}
           </div>
         </div>
 
