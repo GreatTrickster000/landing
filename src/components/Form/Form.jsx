@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "../Button/Button.jsx";
 import cn from "classnames";
 import Input from "../Input/Input.jsx";
+import TextArea from "../TextArea/TextArea.jsx";
 
 export default function Form({}) {
   const [message, setMessage] = useState("");
@@ -51,22 +52,15 @@ export default function Form({}) {
         </div>
 
         <div className={styles.inputArea}>
-          <label htmlFor="message" className={styles.label}>
-            Message
-          </label>
-          <textarea
-            className={cn(styles.area, {
-              [styles.error]: errors.message,
-            })}
+          <TextArea
             id="message"
             name="message"
             placeholder="Write your message..."
+            label="Message"
             value={message}
+            error={errors.message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          {errors.message && (
-            <p className={styles.errorMessage}>{errors.message}</p>
-          )}
           <div
             className={cn(styles.counter, {
               [styles.errorCounter]: message.length > maxLength,

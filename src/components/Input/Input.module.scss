@@ -16,4 +16,8 @@
     @include form-focus;
   }
 }
+.label {
+  @include form-text;
+  color: #404040;
+}
 
