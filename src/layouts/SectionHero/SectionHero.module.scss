@@ -5,7 +5,7 @@
 @use '../../styles/mixins' as *;
 
 
-.section--hero {
+.hero {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,12 +16,12 @@
   max-width: $common-max-width;
 
 
-  .hero__message {
+  .message {
     display: flex;
     flex-wrap: wrap;
     inline-size: 100%;
 
-    .text__pair {
+    .textPair {
       display: flex;
       flex-direction: column;
       letter-spacing: 0;
@@ -34,7 +34,7 @@
     }
   }
 
-  .hero__title {
+  .title {
     color: $h1-color;
     font-family: $font-family-base;
     font-size: clamp(rem(48), calc(2.381vw + rem(29.714)), rem(64));
@@ -48,7 +48,7 @@
   }
 
 
-  .buttons__hero {
+  .buttons {
     display: flex;
     gap: rem(32);
     margin-top: rem(64);
@@ -56,7 +56,7 @@
   }
 
 
-  .image__wrapper {
+  .imageWrapper {
     display: flex;
     justify-content: center;
     inline-size: 100%;
@@ -71,7 +71,7 @@
 
 }
 
-.mobileTablet__title {
+.mobileTabletTitle {
   display: none;
 }
 
@@ -79,12 +79,12 @@
 @media only screen and (max-width: 1439px) {
 
 
-  .section--hero {
+  .hero {
     flex-direction: column;
     gap: clamp(rem(32), calc(-4.071vw + rem(63.267)), rem(48));
   }
 
-  .mobileTablet__title {
+  .mobileTabletTitle {
     display: block;
     color: $h1-color;
     font-family: $font-family-base;
@@ -95,11 +95,11 @@
 
   }
 
-  .hero__title {
+  .title {
     display: none;
   }
 
-  .buttons__hero {
+  .buttons {
     gap: clamp(rem(16), calc(4.071vw + rem(0.733)), rem(32));
     margin-top: clamp(rem(32), calc(8.142vw + rem(1.466)), rem(64));
   }

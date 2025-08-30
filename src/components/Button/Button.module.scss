@@ -12,51 +12,51 @@
   0 rem(1) rem(3) rgba(0, 0, 0, 0.10);
 
 
-  &--primary {
+  &.primary {
     color: $btn-color-prim;
     background: $btn-bg-prim;
     border: rem(0.5) solid $btn-bg-prim;
   }
 
-  &--primary:hover {
+  &.primary:hover {
     outline: none;
     background: $btn-bg-prim-hover;
   }
 
-  &--primary:focus {
+  &.primary:focus {
     background: $btn-bg-prim-focus;
   }
 
 
-  &--secondary {
+  &.secondary {
     color: $btn-color-sec;
     background: $btn-bg-sec;
     border: rem(0.5) solid #E5E5E5;
   }
 
-  &--secondary:hover {
+  &.secondary:hover {
     background: $btn-bg-sec-hover;
   }
 
-  &--secondary:focus {
+  &.secondary:focus {
     background: $btn-bg-sec-hover;
   }
 
 
-  &--default {
+  &.default {
     color: $btn-color-default;
     background: $btn-bg-default;
   }
 
-  &--default:hover {
+  &.default:hover {
     background: $btn-bg-sec-hover;
   }
 
-  &--default:focus {
+  &.default:focus {
     background: $btn-bg-sec-hover;
   }
 
-  &--clear {
+  &.clear {
     border: none;
     background: $btn-bg-sec;
     color: #525252;
@@ -65,14 +65,14 @@
     block-size: rem(48);
   }
 
-  &--active {
+  &.active {
     border: rem(0.5) solid #E5E5E5;
     box-shadow: 0 rem(1) rem(2) 0 rgba(0, 0, 0, 0.06),
     0 rem(1) rem(3) 0 rgba(0, 0, 0, 0.1);
     color: #171717;
   }
 
-  &--xs {
+  &.xs {
     inline-size: rem(98);
     block-size: rem(40);
     font-size: rem(14);
@@ -85,21 +85,21 @@
     }
   }
 
-  &--sm {
+  &.sm {
     inline-size: rem(121);
     block-size: rem(44);
     font-size: rem(16);
     line-height: rem(24);
   }
 
-  &--md {
+  &.md {
     inline-size: rem(175);
     block-size: rem(48);
     font-size: rem(16);
     line-height: rem(24);
   }
 
-  &--lg {
+  &.lg {
     max-inline-size: rem(640);
     inline-size: 100%;
     height: rem(44);
@@ -108,7 +108,7 @@
 
   }
 
-  &--hero {
+  &.hero {
     inline-size: clamp(rem(175.5), calc(-5.580357vw + rem(255.857)), rem(213));
     block-size: rem(60);
 
@@ -121,18 +121,18 @@
     }
   }
 
-  &--pricing {
+  &.pricing {
     inline-size: clamp(rem(320), calc(-47.619vw + rem(1005.714)), rem(640));
     block-size: rem(48);
   }
 
   @media only screen and (max-width: 768px) {
-    .button--pricing {
+    &.pricing {
       inline-size: clamp(rem(287), calc(89.821883vw - rem(49.832061)), rem(640));
     }
   }
 
-  &--faq {
+  &.faq {
     inline-size: clamp(rem(138), calc(-13.991vw + rem(339.465)), rem(287));
     block-size: rem(48);
   }

@@ -14,7 +14,7 @@
   inline-size: auto;
 
 
-  &--column {
+  &.column {
     flex-direction: column;
     max-width: clamp(rem(336), calc(7.143vw + rem(281.143)), rem(384));
     align-items: center;
@@ -36,7 +36,7 @@
   box-shadow: 0 rem(1) rem(2) 0 rgba(0, 0, 0, 0.06),
   0 rem(1) rem(3) 0 rgba(0, 0, 0, 0.1);
 
-  &--newsletter {
+  &.newsletter {
     flex: 0 0 rem(24);
     inline-size: rem(24);
     block-size: rem(24);

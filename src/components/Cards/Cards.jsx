@@ -5,16 +5,12 @@ function Card({ cardImage, direction, type, children }) {
   return (
     <>
       <div
-        className={cn(
-          styles.card,
-          direction === "column" && styles["card--column"],
-        )}
+        className={cn(styles.card, { [styles.column]: direction === "column" })}
       >
         <div
-          className={cn(
-            styles.cardImage,
-            type === "newsletter" && styles["cardImage--newsletter"],
-          )}
+          className={cn(styles.cardImage, {
+            [styles.newsletter]: type === "newsletter",
+          })}
         >
           <img src={cardImage} alt="Card Icon" />
         </div>

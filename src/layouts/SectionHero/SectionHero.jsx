@@ -5,14 +5,12 @@ import styles from "./SectionHero.module.scss";
 
 function Hero() {
   return (
-    <section className={styles["section--hero"]}>
-      <div className={styles["hero__message"]}>
-        <div className={styles["text__pair"]}>
-          <h1 className={styles["hero__title"]}>
-            Well crafted abstract&nbsp;images
-          </h1>
+    <section className={styles.hero}>
+      <div className={styles.message}>
+        <div className={styles.textPair}>
+          <h1 className={styles.title}>Well crafted abstract&nbsp;images</h1>
 
-          <h1 className={styles["mobileTablet__title"]}>
+          <h1 className={styles.mobileTabletTitle}>
             Well crafted abstract gradient
           </h1>
           <Text size="lg" color="gray">
@@ -21,7 +19,7 @@ function Hero() {
             wallpaper and presentations.
           </Text>
         </div>
-        <div className={styles["buttons__hero"]}>
+        <div className={styles.buttons}>
           <Button
             variant="secondary"
             size="hero"
@@ -44,7 +42,7 @@ function Hero() {
           />
         </div>
       </div>
-      <div className={styles["image__wrapper"]}>
+      <div className={styles.imageWrapper}>
         <img src={heroImage} alt="Abstract image" />
       </div>
     </section>

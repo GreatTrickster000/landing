@@ -16,7 +16,7 @@
   font-family: $font-family-base;
 
 
-  &--xs {
+  &.xs {
     gap: rem(24);
     font-size: rem(14);
     line-height: rem(20);
@@ -24,7 +24,7 @@
 
 
     @media only screen and (max-width: 768px) {
-      .nav--xs {
+      &.xs {
         gap: clamp(rem(16), calc(2.037vw + rem(8.361)), rem(24));
       }
       

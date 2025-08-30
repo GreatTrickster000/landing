@@ -8,7 +8,7 @@
   max-inline-size: 37rem;
   inline-size: auto;
 }
-.card--column {
+.card.column {
   flex-direction: column;
   max-width: clamp(21rem, 7.143vw + 17.5714375rem, 24rem);
   align-items: center;
@@ -27,7 +27,7 @@
   border-radius: 50%;
   box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06), 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
 }
-.cardImage--newsletter {
+.cardImage.newsletter {
   flex: 0 0 1.5rem;
   inline-size: 1.5rem;
   block-size: 1.5rem;

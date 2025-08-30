@@ -12,12 +12,9 @@ function Button({
 }) {
   return (
     <button
-      className={cn(
-        styles.button,
-        styles[`button--${variant}`],
-        styles[`button--${size}`],
-        { [styles["button--active"]]: active },
-      )}
+      className={cn(styles.button, styles[variant], styles[size], {
+        [styles.active]: active,
+      })}
       onClick={onClick}
       type={type}
       {...props}
