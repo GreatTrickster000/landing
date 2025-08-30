@@ -1,0 +1,49 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/utils/functions' as *;
+
+
+.someText {
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+
+
+  &.sm {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+
+  &.md {
+    font-size: rem(18);
+    line-height: 1.56;
+  }
+
+  &.lg {
+    font-size: clamp(18px, calc(0.188vw + 17.296px), 20px);
+    line-height: 1.56;
+  }
+
+  &.primary {
+    color: $color-text-primary;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &.gray {
+    color: $text-color-gray;
+  }
+
+  &.bold {
+    color: #171717;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &.blue {
+    color: #4338CA;
+  }
+
+  &.weight-medium {
+    font-weight: $font-weight-medium;
+  }
+
+
+}

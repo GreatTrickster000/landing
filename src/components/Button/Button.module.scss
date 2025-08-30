@@ -1,0 +1,141 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/utils/functions' as *;
+
+.button {
+  font-weight: $font-weight-medium;
+  font-family: $font-family-base;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  border-radius: rem(3);
+  box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.06),
+  0 rem(1) rem(3) rgba(0, 0, 0, 0.10);
+
+
+  &.primary {
+    color: $btn-color-prim;
+    background: $btn-bg-prim;
+    border: rem(0.5) solid $btn-bg-prim;
+  }
+
+  &.primary:hover {
+    outline: none;
+    background: $btn-bg-prim-hover;
+  }
+
+  &.primary:focus {
+    background: $btn-bg-prim-focus;
+  }
+
+
+  &.secondary {
+    color: $btn-color-sec;
+    background: $btn-bg-sec;
+    border: rem(0.5) solid #E5E5E5;
+  }
+
+  &.secondary:hover {
+    background: $btn-bg-sec-hover;
+  }
+
+  &.secondary:focus {
+    background: $btn-bg-sec-hover;
+  }
+
+
+  &.default {
+    color: $btn-color-default;
+    background: $btn-bg-default;
+  }
+
+  &.default:hover {
+    background: $btn-bg-sec-hover;
+  }
+
+  &.default:focus {
+    background: $btn-bg-sec-hover;
+  }
+
+  &.clear {
+    border: none;
+    background: $btn-bg-sec;
+    color: #525252;
+    box-shadow: none;
+    inline-size: clamp(rem(140), calc(-2.9277vw + rem(162.479)), rem(151.5));
+    block-size: rem(48);
+  }
+
+  &.active {
+    border: rem(0.5) solid #E5E5E5;
+    box-shadow: 0 rem(1) rem(2) 0 rgba(0, 0, 0, 0.06),
+    0 rem(1) rem(3) 0 rgba(0, 0, 0, 0.1);
+    color: #171717;
+  }
+
+  &.xs {
+    inline-size: rem(98);
+    block-size: rem(40);
+    font-size: rem(14);
+    line-height: rem(20);
+
+    @media only screen and (max-width: 768px) {
+      & {
+        inline-size: rem(319);
+      }
+    }
+  }
+
+  &.sm {
+    inline-size: rem(121);
+    block-size: rem(44);
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+
+  &.md {
+    inline-size: rem(175);
+    block-size: rem(48);
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+
+  &.lg {
+    max-inline-size: rem(640);
+    inline-size: 100%;
+    height: rem(44);
+    font-size: rem(16);
+    line-height: rem(24);
+
+  }
+
+  &.hero {
+    inline-size: clamp(rem(175.5), calc(-5.580357vw + rem(255.857)), rem(213));
+    block-size: rem(60);
+
+
+    @media only screen and (max-width: 768px) {
+      .button--hero {
+        inline-size: clamp(rem(151.5), calc(15.648855vw + rem(92.817)), rem(213));
+        block-size: clamp(rem(48), calc(3.053vw + rem(36.55)), rem(60));
+      }
+    }
+  }
+
+  &.pricing {
+    inline-size: clamp(rem(320), calc(-47.619vw + rem(1005.714)), rem(640));
+    block-size: rem(48);
+  }
+
+  @media only screen and (max-width: 768px) {
+    &.pricing {
+      inline-size: clamp(rem(287), calc(89.821883vw - rem(49.832061)), rem(640));
+    }
+  }
+
+  &.faq {
+    inline-size: clamp(rem(138), calc(-13.991vw + rem(339.465)), rem(287));
+    block-size: rem(48);
+  }
+}
+
+

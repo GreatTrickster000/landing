@@ -1,0 +1,68 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: rem(96) 0;
+  gap: rem(32);
+
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  max-width: $common-max-width;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.marqueeViewport {
+  position: relative;
+  inline-size: 100%;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  line-height: 0;
+
+  @supports (overflow: clip) {
+    & {
+      overflow-x: clip;
+    }
+  }
+
+  & :global(.rfm-initial-child-container),
+  & :global(.rfm-child-container) {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+
+  & :global(.rfm-marquee) {
+    inline-size: 100%;
+    overflow: hidden;
+  }
+
+  & :global(.rfm-child) {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    padding-right: 80px;
+  }
+
+  & img {
+    display: block;
+    height: rem(48);
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+
+}
+

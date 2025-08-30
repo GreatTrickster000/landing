@@ -1,0 +1,59 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/utils/functions' as *;
+
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  flex: 1 1 rem(592);
+  gap: rem(20);
+  max-inline-size: rem(592);
+  inline-size: auto;
+
+
+  &.column {
+    flex-direction: column;
+    max-width: clamp(rem(336), calc(7.143vw + rem(281.143)), rem(384));
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 rem(48);
+  transform: translateY(rem(-11));
+  inline-size: rem(48);
+  block-size: rem(48);
+  background: $main-wrap-bg;
+  border-radius: 50%;
+  box-shadow: 0 rem(1) rem(2) 0 rgba(0, 0, 0, 0.06),
+  0 rem(1) rem(3) 0 rgba(0, 0, 0, 0.1);
+
+  &.newsletter {
+    flex: 0 0 rem(24);
+    inline-size: rem(24);
+    block-size: rem(24);
+    transform: translateY(rem(2));
+  }
+}
+
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: rem(8);
+  justify-content: center;
+  min-inline-size: 0;
+
+}
+
+
+

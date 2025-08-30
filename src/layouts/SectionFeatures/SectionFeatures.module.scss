@@ -1,0 +1,42 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+@use '../../styles/mixins' as *;
+
+
+.features {
+  display: flex;
+  justify-content: center;
+  @include commonPadding;
+  inline-size: 100%;
+  flex-direction: column;
+  align-items: center;
+  max-width: $common-max-width;
+  gap: clamp(rem(48), calc(2.381vw + rem(29.714)), rem(64));
+  margin: 0 auto;
+}
+
+
+:where(h1, h2, h3, p) {
+  margin: 0;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: rem(32);
+  inline-size: 100%;
+
+}
+
+
+@media (max-width: 767px) {
+  .features {
+
+  }
+}

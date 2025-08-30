@@ -1,0 +1,37 @@
+@use '../styles/tokens/colors' as *;
+@use '../styles/tokens/fonts' as *;
+@use '../styles/utils/functions' as *;
+@use '../styles/mixins' as *;
+@use '../styles/tokens' as *;
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+:root {
+  overscroll-behavior-x: none;
+}
+
+body, main, #root {
+  touch-action: pan-y;
+}

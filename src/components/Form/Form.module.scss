@@ -1,0 +1,100 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/utils/functions' as *;
+@use '../../styles/mixins' as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: $main-wrap-bg;
+  border: rem(1) solid #E5E5E5;
+  border-radius: rem(6);
+  box-shadow: 0 rem(4) rem(6) rem(-2) rgba(0, 0, 0, 0.05),
+  0 rem(10) rem(15) rem(-3) rgba(0, 0, 0, 0.1);
+  padding: rem(32);
+  inline-size: 100%;
+  gap: rem(40);
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    max-inline-size: rem(640);
+    inline-size: 100%;
+
+
+    .nameEmail {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(32);
+
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+        flex: 1 1 0;
+        min-inline-size: 0;
+        inline-size: 100%;
+
+
+
+      }
+    }
+
+    .email {
+      display: flex;
+      flex-direction: column;
+      gap: rem(6);
+      flex: 1 1 0;
+      min-inline-size: 0;
+      inline-size: 100%;
+    }
+  }
+
+  .inputArea {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+
+  }
+}
+
+.counter {
+  display: flex;
+  justify-content: flex-end;
+  @include form-text;
+}
+
+
+
+.error {
+  border: 1px solid #DC2626;
+  box-shadow: 0 0 0 rem(4) rgba(217, 45, 32, 0.12),
+  0 0 0 rem(1) rgba(217, 45, 32, 1);
+}
+
+p,
+.errorCounter {
+  color: #DC2626;
+}
+
+@media only screen and (max-width: 767px) {
+  form {
+    gap: clamp(rem(16), calc(4.071vw + rem(0.733)), rem(32));
+  }
+  .contact-form {
+    flex-wrap: wrap;
+
+  }
+  .nameEmail {
+    gap: clamp(rem(24), calc(2.640vw + rem(14.099)), rem(32));
+  }
+
+}
+
+@media only screen and (max-width: 540px) {
+  .nameEmail {
+    flex-direction: column;
+  }
+}
