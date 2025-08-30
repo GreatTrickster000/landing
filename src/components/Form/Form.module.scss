@@ -27,7 +27,6 @@ form {
       display: flex;
       align-items: flex-start;
       gap: rem(32);
-      @include form-text;
 
 
       .name {

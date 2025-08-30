@@ -16,6 +16,21 @@ header .textWrapper {
 header :where(h1, h2, h3, p) {
   margin: 0;
 }
+header h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  color: #171717;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+header h2.blue {
+  color: #4338CA;
+}
+@media only screen and (max-width: 1440px) {
+  header h2 {
+    font-size: clamp(2.375rem, 0.939vw + 2.1549375rem, 3rem);
+  }
+}
 header .text2 {
   display: flex;
   flex-wrap: wrap;

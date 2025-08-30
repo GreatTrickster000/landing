@@ -13,7 +13,7 @@ function Features() {
   return (
     <>
       <section className={styles.features} id="features">
-        <div className={styles.text__container}>
+        <div className={styles.textContainer}>
           <HeaderSecondary
             text1="Premium abstract images"
             headerText="Easy access to top quality images"

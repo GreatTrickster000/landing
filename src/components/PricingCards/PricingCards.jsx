@@ -1,7 +1,7 @@
 import styles from "./PricingCards.module.scss";
 import Button from "../Button/Button.jsx";
 import Text from "../Text/Text.jsx";
-import H2 from "../H2/h2.jsx";
+
 import cn from "classnames";
 
 export default function PricingCard({
@@ -15,7 +15,7 @@ export default function PricingCard({
   children,
 }) {
   return (
-    <div className={cn(styles.card, { [styles["card--featured"]]: featured })}>
+    <div className={cn(styles.card, { [styles.featured]: featured })}>
       {featured && (
         <div className={styles.badge} role="status" aria-live="polite">
           {badgeText}
@@ -29,11 +29,7 @@ export default function PricingCard({
             </div>
 
             <div className={styles.description}>
-              <Text
-                size="sm"
-                color="gray"
-                className={cn({ [styles["text--blue"]]: featured })}
-              >
+              <Text size="sm" color="gray">
                 {description}
               </Text>
             </div>
@@ -41,26 +37,18 @@ export default function PricingCard({
           <div className={styles.textPair}>
             <div className={styles.price}>
               <div className={styles.numbers}>
-                <H2 className={cn({ [styles["h2--blue"]]: featured })}>
+                <h2 className={cn(styles.h2, { [styles.blue]: featured })}>
                   {price}
-                </H2>
+                </h2>
               </div>
               <div className={styles.interval}>
-                <Text
-                  size="sm"
-                  color="gray"
-                  className={cn({ [styles["text--blue"]]: featured })}
-                >
+                <Text size="sm" color={featured ? "blue" : "gray"}>
                   {interval}
                 </Text>
               </div>
             </div>
             <div className={styles.billingCycle}>
-              <Text
-                size="sm"
-                color="gray"
-                className={cn({ [styles["text--blue"]]: featured })}
-              >
+              <Text size="sm" color="gray">
                 {billing_cycle}
               </Text>
             </div>

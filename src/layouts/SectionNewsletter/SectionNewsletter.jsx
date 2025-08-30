@@ -1,10 +1,10 @@
 import Card from "../../components/Cards/Cards.jsx";
 import Text from "../../components/Text/Text.jsx";
-import H2 from "../../components/H2/h2.jsx";
 import Button from "../../components/Button/Button.jsx";
 import card_16 from "../../images/cards/card_16.svg";
 import styles from "./SectionNewsletter.module.scss";
 import NewsletterImage from "../../images/Newsletter/NewsletterImage.png";
+import Input from "../../components/Input/Input.jsx";
 
 export default function Newsletter() {
   return (
@@ -12,9 +12,9 @@ export default function Newsletter() {
       <div className={styles.content}>
         <div className={styles.message}>
           <div className={styles.heading}>
-            <H2>
+            <h2>
               Get the finest curated abstracts delivered weekly to your inbox
-            </H2>
+            </h2>
           </div>
           <div className={styles.checkItems}>
             <Card cardImage={card_16} type="newsletter">
@@ -36,16 +36,14 @@ export default function Newsletter() {
         </div>
         <div className={styles.email}>
           <div className={styles.emailCapture}>
-            <label htmlFor="email" className={styles["visually-hidden"]}>
-              Email
-            </label>
-            <input
-              id="email"
-              className={styles.input}
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-            />
+            <div className={styles.input}>
+              <Input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </div>
             <div className={styles.button}>
               <Button
                 variant="primary"

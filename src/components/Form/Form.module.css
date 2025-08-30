@@ -20,11 +20,6 @@ form .contact-form .nameEmail {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #737373;
 }
 form .contact-form .nameEmail .name {
   display: flex;

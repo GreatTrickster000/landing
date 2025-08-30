@@ -1,5 +1,4 @@
 import Text from "../Text/Text.jsx";
-import H2 from "../H2/h2.jsx";
 import styles from "./headerSecondary.module.scss";
 import React from "react";
 
@@ -13,14 +12,14 @@ function HeaderSecondary({ text1, headerText, text2 }) {
           </Text>
         </div>
         <div className={styles.headerText}>
-          <H2>
+          <h2>
             {headerText.split("\n").map((line, i, arr) => (
               <React.Fragment key={i}>
                 {line}
                 {i < arr.length - 1 && <br />}
               </React.Fragment>
             ))}
-          </H2>
+          </h2>
         </div>
       </div>
       <div className={styles.text2}>

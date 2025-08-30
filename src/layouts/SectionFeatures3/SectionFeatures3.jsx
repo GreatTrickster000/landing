@@ -12,7 +12,7 @@ function Features3() {
   return (
     <>
       <section className={styles.features3}>
-        <div className={styles["text__container2"]}>
+        <div className={styles.textСontainer}>
           <HeaderSecondary
             text1="Best-in-class support"
             headerText={"Convenience and licensing\n that empowers"}

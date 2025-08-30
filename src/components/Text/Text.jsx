@@ -6,9 +6,9 @@ function Text({ children, size, color, weight }) {
     <p
       className={classNames(
         styles.someText,
-        styles[`someText--${size}`],
-        styles[`someText--${color}`],
-        styles[`someText--weight-${weight}`],
+        styles[size],
+        styles[color],
+        styles[weight],
       )}
     >
       {children}

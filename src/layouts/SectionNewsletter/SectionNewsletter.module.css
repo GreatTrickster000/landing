@@ -6,6 +6,7 @@
   padding: clamp(4rem, 4.762vw + 1.7143125rem, 6rem) clamp(1rem, 11.905vw - 4.7143125rem, 6rem);
   max-width: 90rem;
   gap: clamp(2rem, -4.762vw + 6.2856875rem, 4rem);
+  inline-size: 100%;
 }
 @media only screen and (max-width: 767px) {
   .container {
@@ -23,6 +24,21 @@
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 3.005vw + 1.29575rem, 4rem);
+}
+.container .content .message h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  color: #171717;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.container .content .message h2.blue {
+  color: #4338CA;
+}
+@media only screen and (max-width: 1440px) {
+  .container .content .message h2 {
+    font-size: clamp(2.375rem, 0.939vw + 2.1549375rem, 3rem);
+  }
 }
 .container .content .message .checkItems {
   display: flex;
@@ -45,19 +61,8 @@
   inline-size: 100%;
 }
 .container .content .email .emailCapture .input {
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #737373;
-  border: 0.0625rem solid #E5E5E5;
-  border-radius: 0.1875rem;
-  box-shadow: rgb(229, 229, 229);
   inline-size: clamp(19.9375rem, 1.40845vw + 19.607394375rem, 20.875rem);
   block-size: 2.5rem;
-  background: #FAFAFA;
-  padding: 0.625rem 0.875rem;
-  flex: none;
 }
 .container .imageWrapper {
   inline-size: 100%;

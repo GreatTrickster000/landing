@@ -2,6 +2,8 @@
 @use '../../styles/tokens/fonts' as *;
 @use '../../styles/tokens/distance' as *;
 @use '../../styles/utils/functions' as *;
+@use '../../styles/mixins' as *;
+
 
 
 .card {
@@ -70,6 +72,10 @@
       }
     }
 
+    .h2 {
+     @include h2;
+    }
+
     .cards {
       display: flex;
       flex-direction: column;
@@ -85,7 +91,7 @@
     }
   }
 
-  &--featured {
+  &.featured {
     border: 1px solid #4F46E5;
     box-shadow: 0 rem(25) rem(50) rem(-12) rgba(0, 0, 0, 0.25);
   }
