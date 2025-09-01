@@ -5,7 +5,7 @@ export default function Row({ children }) {
   return (
     <div className={styles.row}>
       <div className={styles.imageWrapper}>
-        <img src={card_16} alt="Card Icon" />
+        <img src={card_16} alt="" />
       </div>
       <div className={styles.text}>{children}</div>
     </div>
