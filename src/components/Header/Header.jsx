@@ -5,6 +5,7 @@ import Nav from "../Navigation/Navigation.jsx";
 import { useState } from "react";
 import cn from "classnames";
 import burger from "../../images/Header/burger.svg";
+import { navLinks } from "../navLinks/navLinks.js";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +19,7 @@ function Header() {
       </div>
 
       <div className={styles.desktopNav}>
-        <Nav>
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#about">About us</a>
-          <a href="#contact">Contact</a>
-        </Nav>
+        <Nav links={navLinks} />
       </div>
 
       <button
@@ -35,13 +30,7 @@ function Header() {
         <img src={burger} alt="burger-button" />
       </button>
       <div className={cn(styles.mobileNav, { [styles.open]: isOpen })}>
-        <Nav>
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#about">About us</a>
-          <a href="#contact">Contact</a>
-        </Nav>
+        <Nav links={navLinks} />
       </div>
 
       <div className={styles.buttons}>

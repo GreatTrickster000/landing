@@ -5,6 +5,7 @@ import footer_3 from "../../images/Footer/footer_3.svg";
 import footer_4 from "../../images/Footer/footer_4.svg";
 import footer_5 from "../../images/Footer/footer_5.svg";
 import Nav from "../Navigation/Navigation.jsx";
+import { navLinks } from "../navLinks/navLinks.js";
 
 function Footer() {
   return (
@@ -12,12 +13,7 @@ function Footer() {
       <footer className={styles.footer}>
         <div className={styles.content}>
           <div className={styles.nav}>
-            <Nav size="xs">
-              <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#about">About us</a>
-              <a href="#contact">Contact</a>
-            </Nav>
+            <Nav size="xs" links={navLinks} exclude={["#home"]} />
           </div>
           <div className={styles.wrap}>
             <div className={styles.logos}>
