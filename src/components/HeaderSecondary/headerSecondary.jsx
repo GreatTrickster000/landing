@@ -12,7 +12,7 @@ function HeaderSecondary({ text1, headerText, text2 }) {
           </Text>
         </div>
         <div className={styles.headerText}>
-          <h2>
+          <h2 className={styles.h2}>
             {headerText.split("\n").map((line, i, arr) => (
               <React.Fragment key={i}>
                 {line}

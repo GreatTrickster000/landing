@@ -3,7 +3,7 @@
 @use '../../styles/utils/functions' as *;
 @use '../../styles/mixins' as *;
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   background: $main-wrap-bg;

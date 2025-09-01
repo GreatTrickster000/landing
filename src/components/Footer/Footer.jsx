@@ -8,7 +8,7 @@ import Nav from "../Navigation/Navigation.jsx";
 
 function Footer() {
   return (
-    <div className={styles.footer__wrapper}>
+    <div className={styles.wrapper}>
       <footer className={styles.footer}>
         <div className={styles.content}>
           <div className={styles.nav}>

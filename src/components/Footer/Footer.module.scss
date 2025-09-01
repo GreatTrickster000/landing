@@ -4,7 +4,7 @@
 @use '../../styles/utils/functions' as *;
 
 
-.footer__wrapper {
+.wrapper {
   padding: clamp(rem(64), calc(4.762vw + rem(27.429)), rem(96)) clamp(rem(32), calc(42.857vw + rem(-297.143)), rem(320));
 
 

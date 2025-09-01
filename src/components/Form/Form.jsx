@@ -21,7 +21,7 @@ export default function Form({}) {
     if (Object.keys(newErrors).length) return;
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles["contact-form"]}>
         <div className={styles.nameEmail}>
           <div className={styles.name}>
