@@ -1,7 +1,8 @@
 import styles from "./Cards.module.scss";
 import cn from "classnames";
+import Text from "../../components/Text/Text.jsx";
 
-function Card({ cardImage, direction, type, children }) {
+function Card({ cardImage, direction, type, title, text, style }) {
   return (
     <>
       <div
@@ -12,9 +13,17 @@ function Card({ cardImage, direction, type, children }) {
             [styles.newsletter]: type === "newsletter",
           })}
         >
-          <img src={cardImage} alt="Card Icon" />
+          <img src={cardImage} alt="title" />
         </div>
-        <div className={styles.cardContent}>{children}</div>
+        <div className={styles.cardContent}>
+          <Text size="md" color="bold">
+            {title}
+          </Text>
+
+          <Text size="sm" color="gray" style={style}>
+            {text}
+          </Text>
+        </div>
       </div>
     </>
   );

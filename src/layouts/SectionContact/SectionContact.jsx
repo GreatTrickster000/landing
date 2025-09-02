@@ -1,10 +1,8 @@
 import Card from "../../components/Cards/Cards.jsx";
 import Form from "../../components/Form/Form.jsx";
 import Text from "../../components/Text/Text.jsx";
-import card_13 from "../../images/cards/card_13.svg";
-import card_14 from "../../images/cards/card_14.svg";
-import card_15 from "../../images/cards/card_15.svg";
 import styles from "./SectionContact.module.scss";
+import { featuresData } from "../../components/Features-data/featuresData.js";
 
 export default function Contact() {
   return (
@@ -21,21 +19,15 @@ export default function Contact() {
             </div>
           </div>
           <div className={styles.cards}>
-            <Card cardImage={card_13}>
-              <Text weight="weight-medium" size="sm" color="gray">
-                123 Maple Street, Springfield, IL, USA
-              </Text>
-            </Card>
-            <Card cardImage={card_14}>
-              <Text weight="weight-medium" size="sm" color="gray">
-                +1 (650) 555-0198
-              </Text>
-            </Card>
-            <Card cardImage={card_15}>
-              <Text weight="weight-medium" size="sm" color="gray">
-                hello@abstractly.com
-              </Text>
-            </Card>
+            {featuresData.slice(15, 18).map((item, i) => (
+              <Card
+                key={i}
+                cardImage={item.cardImage}
+                title={item.title}
+                text={item.text}
+                style={{ fontWeight: "400" }}
+              />
+            ))}
           </div>
         </div>
         <div className={styles.right}>

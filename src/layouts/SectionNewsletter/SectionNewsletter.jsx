@@ -1,10 +1,10 @@
 import Card from "../../components/Cards/Cards.jsx";
 import Text from "../../components/Text/Text.jsx";
 import Button from "../../components/Button/Button.jsx";
-import card_16 from "../../images/cards/card_16.svg";
 import styles from "./SectionNewsletter.module.scss";
 import NewsletterImage from "../../images/Newsletter/NewsletterImage.png";
 import Input from "../../components/Input/Input.jsx";
+import { featuresData } from "../../components/Features-data/featuresData.js";
 
 export default function Newsletter() {
   return (
@@ -17,21 +17,15 @@ export default function Newsletter() {
             </h2>
           </div>
           <div className={styles.checkItems}>
-            <Card cardImage={card_16} type="newsletter">
-              <Text size="md" color="gray">
-                Exclusive access to new abstract images and collections
-              </Text>
-            </Card>
-            <Card cardImage={card_16} type="newsletter">
-              <Text size="md" color="gray">
-                Unlock special promotions only for subscribers
-              </Text>
-            </Card>
-            <Card cardImage={card_16} type="newsletter">
-              <Text size="md" color="gray">
-                Regular doses of artistic inspiration
-              </Text>
-            </Card>
+            {featuresData.slice(12, 15).map((item, i) => (
+              <Card
+                key={i}
+                cardImage={item.cardImage}
+                title={item.title}
+                text={item.text}
+                type={"newsletter"}
+              />
+            ))}
           </div>
         </div>
         <div className={styles.email}>
@@ -42,6 +36,7 @@ export default function Newsletter() {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                className={styles.input}
               />
             </div>
             <div className={styles.button}>

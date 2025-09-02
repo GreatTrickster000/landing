@@ -10,6 +10,7 @@ export default function Input({
   value,
   onChange,
   error,
+  className,
 }) {
   return (
     <div className={styles.wrapper}>
@@ -17,7 +18,7 @@ export default function Input({
         {label}
       </label>
       <input
-        className={cn(styles.input, {
+        className={cn(styles.input, className, {
           [styles.error]: error,
         })}
         id={id}
