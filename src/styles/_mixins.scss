@@ -16,8 +16,7 @@
   }
 
   @media only screen and (max-width: 1440px) {
-    font-size: clamp(rem(38), calc(0.939vw + rem(34.479)), rem(48));
-
+    font-size: clamp(rem(38), calc(0.9vw + rem(34)), rem(48));
   }
 }
 
@@ -34,14 +33,14 @@
   margin: 0 auto;
 
   @media only screen and (max-width: 767px) {
-    gap: clamp(rem(48), calc(4.071vw + rem(32.733)), rem(64));
+    gap: clamp(rem(48), calc(4.1vw + rem(33)), rem(64));
   }
 
   .content2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(rem(32), calc(-1.502vw + rem(53.634)), rem(48));;
+    gap: clamp(rem(32), calc(-1.5vw + rem(54)), rem(48));
     @if $reverse {
       flex-direction: row-reverse;
     } @else {
@@ -131,10 +130,12 @@
 }
 
 @mixin commonPadding {
-  padding: clamp(rem(64), calc(4.762vw + rem(27.429)), rem(96)) clamp(rem(16), calc(11.905vw - rem(75.429)), rem(96));
+  padding: clamp(rem(64), calc(4.8vw + rem(27)), rem(96))
+  clamp(rem(16), calc(11.9vw - rem(75)), rem(96));
 
   @media only screen and (max-width: 767px) {
-    padding: clamp(rem(48), calc(4.071vw + rem(32.733)), rem(64)) clamp(rem(12), calc(1.018vw + rem(8.183)), rem(16));
+    padding: clamp(rem(48), calc(4.1vw + rem(33)), rem(64))
+    clamp(rem(12), calc(1vw + rem(8)), rem(16));
   }
 
 }

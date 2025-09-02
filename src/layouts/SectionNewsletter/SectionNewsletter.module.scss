@@ -12,21 +12,21 @@
   align-items: center;
   @include commonPadding;
   max-width: $common-max-width;
-  gap: clamp(rem(32), calc(-4.762vw + rem(100.571)), rem(64));
+  gap: clamp(rem(32), calc(-4.8vw + rem(101)), rem(64));
   inline-size: 100%;
 
   .content {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    max-inline-size: clamp(rem(592), calc(-16.667vw + rem(832)), rem(704));
+    max-inline-size: clamp(rem(592), calc(-16.7vw + rem(832)), rem(704));
     gap: rem(48);
 
 
     .message {
       display: flex;
       flex-direction: column;
-      gap: clamp(rem(32), calc(3.005vw + rem(20.732)), rem(64));
+      gap: clamp(rem(32), calc(3vw + rem(21)), rem(64));
 
       h2 {
         @include h2;
@@ -46,7 +46,7 @@
     .email {
       display: flex;
       flex-direction: column;
-      gap: clamp(rem(12), calc(0.375586vw + rem(10.591549)), rem(16));
+      gap: clamp(rem(12), calc(0.4vw + rem(11)), rem(16));
 
       .emailCapture {
         display: flex;
@@ -57,7 +57,7 @@
 
 
         .input {
-          inline-size: clamp(rem(319), calc(1.40845vw + rem(313.71831)), rem(334));
+          inline-size: clamp(rem(319), calc(1.4vw + rem(314)), rem(334));
           block-size: rem(40);
 
         }
@@ -97,7 +97,7 @@
   .container {
     flex-direction: column;
     align-items: stretch;
-    gap: clamp(rem(16), calc(12.214vw - rem(29.802)), rem(64));
+    gap: clamp(rem(16), calc(12.2vw - rem(30)), rem(64));
   }
 
   .content {

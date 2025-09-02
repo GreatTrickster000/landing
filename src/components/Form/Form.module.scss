@@ -81,14 +81,14 @@ p,
 
 @media only screen and (max-width: 767px) {
   form {
-    gap: clamp(rem(16), calc(4.071vw + rem(0.733)), rem(32));
+    gap: clamp(rem(16), calc(4.1vw + rem(1)), rem(32));
   }
   .contact-form {
     flex-wrap: wrap;
 
   }
   .nameEmail {
-    gap: clamp(rem(24), calc(2.640vw + rem(14.099)), rem(32));
+    gap: clamp(rem(24), calc(2.6vw + rem(14)), rem(32));
   }
 
 }

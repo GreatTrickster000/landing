@@ -13,7 +13,7 @@ section {
   justify-content: center;
   align-items: center;
   max-width: $common-max-width;
-  gap: clamp(rem(32), calc(-4.762vw + rem(100.571)), rem(64));
+  gap: clamp(rem(32), calc(-4.8vw + rem(101)), rem(64));
 
   .left {
     display: flex;
@@ -33,8 +33,8 @@ section {
         font-family: $font-family-base;
         font-weight: $font-weight-semi-bold;
         color: $h2-color;
-        font-size: clamp(rem(48), calc(1.785714vw + rem(34.286)), rem(60));
-        line-height: clamp(rem(48), calc(1.785714vw + rem(34.286)), rem(60));
+        font-size: clamp(rem(48), calc(1.8vw + rem(34)), rem(60));
+        line-height: clamp(rem(48), calc(1.8vw + rem(34)), rem(60));
         text-wrap: pretty;
       }
     }
@@ -63,14 +63,14 @@ section {
 @media only screen and (max-width: 767px) {
   .sectionWrapper {
     flex-direction: column;
-    gap: clamp(rem(48), calc(4.071vw + rem(32.733)), rem(64));
+    gap: clamp(rem(48), calc(4.1vw + rem(33)), rem(64));
   }
   .sectionWrapper .left {
-    gap: clamp(rem(40), calc(2.036vw + rem(32.366)), rem(48));
+    gap: clamp(rem(40), calc(2vw + rem(32)), rem(48));
   }
   .sectionWrapper .left .message .header {
-    font-size: clamp(rem(36), calc(3.053vw + rem(24.55)), rem(48));
-    line-height: clamp(rem(40), calc(2.036vw + rem(32.366)), rem(48));
+    font-size: clamp(rem(36), calc(3.1vw + rem(25)), rem(48));
+    line-height: clamp(rem(40), calc(2vw + rem(32)), rem(48));
     text-wrap: balance;
   }
   .left, .right {

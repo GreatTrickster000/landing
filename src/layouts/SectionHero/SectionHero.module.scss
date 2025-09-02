@@ -37,7 +37,7 @@
   .title {
     color: $h1-color;
     font-family: $font-family-base;
-    font-size: clamp(rem(48), calc(2.381vw + rem(29.714)), rem(64));
+    font-size: clamp(rem(48), calc(2.4vw + rem(30)), rem(64));
     line-height: 1.2;
     font-weight: $font-weight-semi-bold;
     text-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25),
@@ -81,15 +81,15 @@
 
   .hero {
     flex-direction: column;
-    gap: clamp(rem(32), calc(-4.071vw + rem(63.267)), rem(48));
+    gap: clamp(rem(32), calc(-4.1vw + rem(63)), rem(48));
   }
 
   .mobileTabletTitle {
     display: block;
     color: $h1-color;
     font-family: $font-family-base;
-    font-size: clamp(rem(36), calc(3.053vw + rem(24.55)), rem(48));
-    padding-bottom: clamp(rem(16), calc(2.036vw + rem(8.366)), rem(24));
+    font-size: clamp(rem(36), calc(3.1vw + rem(25)), rem(48));
+    padding-bottom: clamp(rem(16), calc(2vw + rem(8.5)), rem(24));
     inline-size: 100%;
     overflow-wrap: anywhere;
 
@@ -100,7 +100,7 @@
   }
 
   .buttons {
-    gap: clamp(rem(16), calc(4.071vw + rem(0.733)), rem(32));
-    margin-top: clamp(rem(32), calc(8.142vw + rem(1.466)), rem(64));
+    gap: clamp(rem(16), calc(4.1vw + rem(1)), rem(32));
+    margin-top: clamp(rem(32), calc(8.1vw + rem(1)), rem(64));
   }
 }

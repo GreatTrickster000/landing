@@ -16,7 +16,7 @@
 
   &.column {
     flex-direction: column;
-    max-width: clamp(rem(336), calc(7.143vw + rem(281.143)), rem(384));
+    max-width: clamp(rem(336), calc(7.1vw + rem(281)), rem(384));
     align-items: center;
     text-align: center;
   }

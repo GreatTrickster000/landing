@@ -61,7 +61,7 @@
     background: $btn-bg-sec;
     color: #525252;
     box-shadow: none;
-    inline-size: clamp(rem(140), calc(-2.9277vw + rem(162.479)), rem(151.5));
+    inline-size: clamp(rem(140), calc(-2.9vw + rem(162.5)), rem(151.5));
     block-size: rem(48);
   }
 
@@ -109,31 +109,31 @@
   }
 
   &.hero {
-    inline-size: clamp(rem(175.5), calc(-5.580357vw + rem(255.857)), rem(213));
+    inline-size: clamp(rem(175.5), calc(-5.6vw + rem(255.9)), rem(213));
     block-size: rem(60);
 
 
     @media only screen and (max-width: 768px) {
       .button--hero {
-        inline-size: clamp(rem(151.5), calc(15.648855vw + rem(92.817)), rem(213));
-        block-size: clamp(rem(48), calc(3.053vw + rem(36.55)), rem(60));
+        inline-size: clamp(rem(151.5), calc(15.6vw + rem(92.8)), rem(213));
+        block-size: clamp(rem(48), calc(3vw + rem(36.5)), rem(60));
       }
     }
   }
 
   &.pricing {
-    inline-size: clamp(rem(320), calc(-47.619vw + rem(1005.714)), rem(640));
+    inline-size: clamp(rem(320), calc(-47.6vw + rem(1006)), rem(640));
     block-size: rem(48);
   }
 
   @media only screen and (max-width: 768px) {
     &.pricing {
-      inline-size: clamp(rem(287), calc(89.821883vw - rem(49.832061)), rem(640));
+      inline-size: clamp(rem(287), calc(89.8vw - rem(50)), rem(640));
     }
   }
 
   &.faq {
-    inline-size: clamp(rem(138), calc(-13.991vw + rem(339.465)), rem(287));
+    inline-size: clamp(rem(138), calc(-14vw + rem(339.5)), rem(287));
     block-size: rem(48);
   }
 }

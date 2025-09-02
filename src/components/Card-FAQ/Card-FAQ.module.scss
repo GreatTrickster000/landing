@@ -7,7 +7,7 @@
 .card {
   display: flex;
   justify-content: space-between;
-  padding: clamp(rem(16), calc(1.502vw + rem(10.366)), rem(32));
+  padding: clamp(rem(16), calc(1.5vw + rem(10)), rem(32));
   border: 1px solid #E5E5E5;
   border-radius: rem(8);
   box-shadow: 0 rem(2) rem(4) rem(-1) rgba(0, 0, 0, 0.06),

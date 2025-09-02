@@ -42,7 +42,7 @@
 
     @media only screen and (max-width: 768px) {
       &.xs {
-        gap: clamp(rem(16), calc(2.037vw + rem(8.361)), rem(24));
+        gap: clamp(rem(16), calc(2vw + rem(8.5)), rem(24));
       }
 
     }

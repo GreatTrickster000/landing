@@ -5,7 +5,8 @@
 
 
 .wrapper {
-  padding: clamp(rem(64), calc(4.762vw + rem(27.429)), rem(96)) clamp(rem(32), calc(42.857vw + rem(-297.143)), rem(320));
+  padding: clamp(rem(64), calc(4.8vw + rem(27.5)), rem(96))
+  clamp(rem(32), calc(42.9vw - rem(297)), rem(320));
 
 
   .footer {
@@ -54,11 +55,10 @@
 
 @media only screen and (max-width: 768px) {
   .footer__wrapper {
-    padding: clamp(rem(48), calc(3.571vw + rem(36.571)), rem(64)) rem(32);
+    padding: clamp(rem(48), calc(3.6vw + rem(36.5)), rem(64)) rem(32);
 
   }
   .content .wrap .logos {
-    gap: clamp(rem(16), calc(2.037vw + rem(8.361)), rem(24));
-
+    gap: clamp(rem(16), calc(2vw + rem(8.5)), rem(24));
   }
 }
