@@ -5,15 +5,11 @@ import HeaderSecondary from "../../components/HeaderSecondary/headerSecondary.js
 import Row from "../../components/Row/Row.jsx";
 import Text from "../../components/Text/Text.jsx";
 import { useState } from "react";
+import { pricingData } from "../../components/Pricing-data/pricingData.js";
 
 export default function Pricing() {
   const [period, setPeriod] = useState("monthly");
   const isAnnually = period === "annually";
-
-  const prices = {
-    monthly: { basic: "9.99", standard: "19.99", premium: "29.99" },
-    annually: { basic: "99.99", standard: "189.99", premium: "289.99" },
-  };
 
   const interval = isAnnually ? "/ year" : "/ month";
   const billing = isAnnually ? "Billed annually" : "Billed monthly";
@@ -49,102 +45,25 @@ export default function Pricing() {
         </div>
       </div>
       <div className={styles.card}>
-        <PricingCard
-          plan={"Basic Plan"}
-          description={"Access to a curated selection of abstract\n images"}
-          price={prices[period].basic}
-          interval={interval}
-          billing_cycle={billing}
-        >
-          <Row>
-            <Text size="sm" color="gray">
-              Standard quality images
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Limited to personal use
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Email support
-            </Text>
-          </Row>
-        </PricingCard>
-        <PricingCard
-          plan={"Standard Plan"}
-          description={"Next-level Integrations, priced economically"}
-          price={prices[period].standard}
-          interval={interval}
-          billing_cycle={billing}
-          featured={true}
-        >
-          <Row>
-            <Text size="sm" color="gray">
-              Expanded library with more diverse abstract images
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              High-resolution images available
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Suitable for commercial use
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Priority email support
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Advanced analytics
-            </Text>
-          </Row>
-        </PricingCard>
-        <PricingCard
-          plan={"Premium Plan"}
-          description={"Experience limitless living for power users"}
-          price={prices[period].premium}
-          interval={interval}
-          billing_cycle={billing}
-        >
-          <Row>
-            <Text size="sm" color="gray">
-              Full access to the entire image library, including exclusive
-              content
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Highest quality images, including premium collections
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Commercial and resale rights
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Dedicated customer support line
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              24/7 support response time
-            </Text>
-          </Row>
-          <Row>
-            <Text size="sm" color="gray">
-              Advanced analytics and insights
-            </Text>
-          </Row>
-        </PricingCard>
+        {pricingData.map(({ plan, description, price, featured, features }) => (
+          <PricingCard
+            key={plan}
+            plan={plan}
+            description={description}
+            price={price[period]}
+            interval={interval}
+            billingCycle={billing}
+            featured={featured}
+          >
+            {features.map((feature, i) => (
+              <Row key={i}>
+                <Text size="sm" color="gray">
+                  {feature}
+                </Text>
+              </Row>
+            ))}
+          </PricingCard>
+        ))}
       </div>
     </section>
   );

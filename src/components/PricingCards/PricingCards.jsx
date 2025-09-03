@@ -11,7 +11,7 @@ export default function PricingCard({
   description,
   interval,
   price,
-  billing_cycle,
+  billingCycle,
   children,
 }) {
   return (
@@ -49,7 +49,7 @@ export default function PricingCard({
             </div>
             <div className={styles.billingCycle}>
               <Text size="sm" color="gray">
-                {billing_cycle}
+                {billingCycle}
               </Text>
             </div>
           </div>
