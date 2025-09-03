@@ -1,0 +1,48 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/tokens/distance' as *;
+@use '../../styles/utils/functions' as *;
+@use '../../styles/mixins' as *;
+
+
+section {
+  @include commonPadding;
+  max-width: $common-max-width;
+  margin: 0 auto;
+
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(40);
+    inline-size: 100%;
+
+    .text {
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      inline-size: 100%;
+    }
+
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    gap: rem(32);
+    align-items: center;
+    inline-size: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 1439px) {
+  .card {
+    flex-direction: column;
+  }
+}

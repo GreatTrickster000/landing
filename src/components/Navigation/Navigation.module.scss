@@ -1,0 +1,60 @@
+@use '../../styles/tokens/colors' as *;
+@use '../../styles/tokens/fonts' as *;
+@use '../../styles/utils/functions' as *;
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  inline-size: 100%;
+  block-size: auto;
+  gap: rem(32);
+  font-weight: $font-weight-medium;
+  font-size: rem(16);
+  line-height: rem(24);
+  font-family: $font-family-base;
+
+
+
+  a {
+    text-decoration: none;
+    color: $a-font-color;
+
+    &:hover {
+      color: $a-font-color-hover;
+    }
+
+    &:focus {
+      color: $a-font-color-focus;
+      box-shadow: 0 0 0 rem(4) #444CE71F;
+      border-radius: rem(3);
+      padding: rem(2) rem(4);
+    }
+  }
+
+  &.xs {
+    gap: rem(24);
+    font-size: rem(14);
+    line-height: rem(20);
+    color: #525252;
+
+
+    @media only screen and (max-width: 768px) {
+      &.xs {
+        gap: clamp(rem(16), calc(2vw + rem(8.5)), rem(24));
+      }
+
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .nav {
+    font-size: rem(8);
+    line-height: rem(18);
+    gap: rem(16);
+  }
+}
