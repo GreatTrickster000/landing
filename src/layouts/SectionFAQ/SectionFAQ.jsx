@@ -9,10 +9,7 @@ export default function SectionFAQ() {
     <section>
       <div className={styles.content}>
         <div className={styles.textPair}>
-          <HeaderSecondary
-            headerText={"Frequently asked questions"}
-            text2={"Choose any questions you need"}
-          />
+          <HeaderSecondary id={"SectionFAQ"} />
         </div>
         <div className={styles.faqList}>
           {faqData.map((item, i) => (

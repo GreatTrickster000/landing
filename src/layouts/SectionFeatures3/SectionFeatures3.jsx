@@ -1,7 +1,6 @@
 import styles from "./SectionFeatures3.module.scss";
 import Card from "../../components/Cards/Cards.jsx";
 import features3 from "../../images/Features3/Features3.png";
-
 import HeaderSecondary from "../../components/HeaderSecondary/headerSecondary.jsx";
 import { featuresData } from "../../components/Features-data/featuresData.js";
 
@@ -10,13 +9,7 @@ function Features3() {
     <>
       <section className={styles.features3}>
         <div className={styles.textСontainer}>
-          <HeaderSecondary
-            text1="Best-in-class support"
-            headerText={"Convenience and licensing\n that empowers"}
-            text2={
-              "In a world where storytelling constantly evolves, \ndon't let licensing and poor support hold you down."
-            }
-          />
+          <HeaderSecondary id={"SectionFeatures3"} />
         </div>
         <div className={styles["content2"]}>
           <div className={styles["cards2"]}>

@@ -8,14 +8,7 @@ function Features() {
     <>
       <section className={styles.features} id="features">
         <div className={styles.textContainer}>
-          <HeaderSecondary
-            text1="Premium abstract images"
-            headerText="Easy access to top quality images"
-            text2={
-              "In a world where storytelling constantly evolves, we lead with groundbreaking " +
-              "images designed for your presentation excellence."
-            }
-          />
+          <HeaderSecondary id={"SectionFeatures"} />
         </div>
         <div className={styles.cards}>
           {featuresData.slice(0, 6).map((item, i) => (

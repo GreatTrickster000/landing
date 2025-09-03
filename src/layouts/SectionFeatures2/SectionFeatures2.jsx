@@ -9,13 +9,7 @@ function Features2() {
     <>
       <section className={styles.features2} id="about">
         <div className={styles.textContainer}>
-          <HeaderSecondary
-            text1="High quality images"
-            headerText="For designers, by designers"
-            text2={
-              "Unleash boundless creativity with a large repository of images optimized for designers"
-            }
-          />
+          <HeaderSecondary id={"SectionFeatures2"} />
         </div>
         <div className={styles.content2}>
           <div className={styles.cards2}>

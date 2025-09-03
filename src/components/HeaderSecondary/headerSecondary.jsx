@@ -1,19 +1,22 @@
 import Text from "../Text/Text.jsx";
 import styles from "./headerSecondary.module.scss";
 import React from "react";
+import { headerSecondaryData } from "../HeaderSecondary-data/headerSecondaryData.js";
 
-function HeaderSecondary({ text1, headerText, text2 }) {
+function HeaderSecondary({ id }) {
+  const data = headerSecondaryData[id];
+  if (!data) return null;
   return (
     <header className={styles.root}>
       <div className={styles["textWrapper"]}>
         <div className={styles.text1}>
           <Text size="sm" color="primary">
-            {text1}
+            {data.text1}
           </Text>
         </div>
         <div className={styles.headerText}>
           <h2 className={styles.h2}>
-            {headerText.split("\n").map((line, i, arr) => (
+            {data.headerText.split("\n").map((line, i, arr) => (
               <React.Fragment key={i}>
                 {line}
                 {i < arr.length - 1 && <br />}
@@ -24,7 +27,7 @@ function HeaderSecondary({ text1, headerText, text2 }) {
       </div>
       <div className={styles.text2}>
         <Text size="lg" color="gray">
-          {text2.split("\n").map((line, i, arr) => (
+          {data.text2.split("\n").map((line, i, arr) => (
             <React.Fragment key={i}>
               {line}
               {i < arr.length - 1 && <br />}

@@ -13,19 +13,11 @@ export default function Pricing() {
 
   const interval = isAnnually ? "/ year" : "/ month";
   const billing = isAnnually ? "Billed annually" : "Billed monthly";
-
   return (
     <section>
       <div className={styles.content}>
         <div className={styles.text} id="pricing">
-          <HeaderSecondary
-            text1={"Pricing Tiers"}
-            headerText={"Fit for all your needs"}
-            text2={
-              "Pick the plan that suits you today and " +
-              "step up as your demands grow - our flexible options\n have your journey mapped out."
-            }
-          />
+          <HeaderSecondary id={"SectionPricing"} />
         </div>
         <div className={styles.button}>
           <Button
